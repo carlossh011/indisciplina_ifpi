@@ -1,5 +1,5 @@
 # 1.Escopo do Projeto
-Delimitar as características do projeto. Descrever do que se trata, deixando claro o contexto abordado.
+O problema consiste na demora das advertências infratórias, que se acumulam, demoram a ser registradas e a ser recebidas pelos pais. Em alguns casos, os alunos não entregam as advertências aos pais, e, assim, eles não ficam informados sobre elas.
 # 2. Problema
 O processo de registro e comunicação das advertências.
 ## 2.1 Instrução do Problema
@@ -31,11 +31,21 @@ São os mais prejudicados pela demora na comunicação. Muitas vezes só ficam s
 
 Alunos  
 Recebem a advertência, mas às vezes não entregam o documento aos pais. Um sistema mais claro e rápido ajuda na responsabilidade e acompanhamento da conduta.
+## 3.1 Resumo das Partes Interessadas
+| Nome                | Descrição                                            | Função                                                                 |
+|---------------------|------------------------------------------------------|------------------------------------------------------------------------|
+| Time de Gerenciamento | Grupo de alunos de APS do IFPI-Campus Angical       | Gerenciamento de projeto e dos membros do time de desenvolvimento, assim como contato com o cliente para definição de requisitos. |
+## 3.2 Resumo dos Usuarios
+| Nome   | Descrição                                   |
+|--------|---------------------------------------------|
+| Alunos | Ter acesso às INFRAÇÕES DISCIPLINARES.     |
+
+
 # 4. Visão Geral do Produto
 ## 4.1 Perspectiva do Produto
 O produto será um sistema digital integrado ao fluxo escolar, permitindo que professores registrem advertências diretamente e que pais sejam notificados automaticamente.
 ## 4.2 Resumo dos Recursos
-- Registro rápido de advertências pelos professores.
+- registro rápido de advertências pelos professores.
 - Encaminhamento automático para coordenação e direção.
 - Notificação instantânea aos pais.
 - Histórico organizado por aluno.
@@ -43,34 +53,41 @@ O produto será um sistema digital integrado ao fluxo escolar, permitindo que pr
 - Acesso controlado para cada nível (professor, coordenação, direção).
 # 5. Recursos do Produto(Funcionalidades)
 Registro de advertências
-- Professores podem registrar advertências diretamente pelo sistema
+- Professores podem registrar advertencias diretamente pelo sistema
 
 Fluxo automatizado
-- Advertências são enviadas automaticamente à coordenação e direção para validação.
+- Advertências são enviadas automaticamente a coordenação e direção para validação.
 
 Notificações aos pais
-- Envio de SMS, e-mail ou notificação via aplicativo para os responsáveis.
+- Envio de sms, e-mail ou notificação via aplicativo(whatswapp ou outro) para os responsaveis
 
 Histórico disciplinar
-- Ficha do aluno com todas as advertências registradas, organizadas por data e tipo.
+- ficha do aluno com todas as advertências registradas, organizadas por data e tipo.
 
 Painel de acompanhamento
 - Coordenação e direção podem visualizar o andamento das advertências.
 
-Relatórios
-- Geração de relatórios mensais ou por turma.
+Relatorios
+- Geração de relatorios mensais ou por turma.
 
 Controle de permissões
-- Cada usuário acessa apenas suas funções (professor, coordenação, direção, pais).
-# 6. Restrições
-## 6.1 Restrições de Design
+- Cada usuario acessa apenas suas funções (professor, coordenação, direção, pais).
+
+# 6. Casos de Uso
+
+## 6.1 Diagrama de Casos de Uso
+
+## 6.2 Fluxo de Casos de Usos
+
+# 7. Restrições
+## 7.1 Restrições de Design
 - Interface deve ser simples e fácil para uso rápido em sala de aula.
 - Deve funcionar bem em computadores e celulares
 - Uso de linguagem clara para pais e professores
-## 6.2 Restrições de Segurança
+## 7.2 Restrições de Segurança
 - Apenas usuários autorizados podem acessar advertencias
 - Notificações devem ser enviadas de forma segura.
-## 6.3 Restrições de Metodologia (Processos e Ferramentas)
-- Deve integrar com ferramentas já utilizadas pela escola, se possível.
+## 7.3 Restrições de Metodologia (Processos e Ferramentas)
+- Deve integrar com ferramentas ja utilizadas pela escola, se possível.
 - Registro deve ser auditável (mostrar quem fez, quando fez)
 - Sistema deve estar disponível mesmo com internet limitada.
