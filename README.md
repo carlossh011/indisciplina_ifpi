@@ -1,7 +1,7 @@
 # 1.Escopo do Projeto
-O problema consiste na demora das advertências infratórias, que se acumulam, demoram a ser registradas e a ser recebidas pelos pais. Em alguns casos, os alunos não entregam as advertências aos pais, e, assim, eles não ficam informados sobre elas.
+O sistema tem como objetivo acelerar e organizar o fluxo disciplinar, permitindo que advertências sejam registradas rapidamente pelos professores e comunicadas aos pais de forma automática, reduzindo atrasos, papelada e problemas de comunicação.
 # 2. Problema
-O processo de registro e comunicação das advertências.
+O processo de registro e comunicação das advertências é lento, manual e burocrático.
 ## 2.1 Instrução do Problema
 | O problema é | O processo de registro e comunicação das advertências é lento, manual e pouco eficiente. |
 |--------------|-------------------------------------------------------------------------------------------|
@@ -32,13 +32,25 @@ São os mais prejudicados pela demora na comunicação. Muitas vezes só ficam s
 Alunos  
 Recebem a advertência, mas às vezes não entregam o documento aos pais. Um sistema mais claro e rápido ajuda na responsabilidade e acompanhamento da conduta.
 ## 3.1 Resumo das Partes Interessadas
-| Nome                | Descrição                                            | Função                                                                 |
-|---------------------|------------------------------------------------------|------------------------------------------------------------------------|
-| Time de Gerenciamento | Grupo de alunos de APS do IFPI-Campus Angical       | Gerenciamento de projeto e dos membros do time de desenvolvimento, assim como contato com o cliente para definição de requisitos. |
+| Parte Interessada                 | Descrição                                                                     | Função / Interesse no Sistema                                       |
+| --------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| **Professores**                   | Responsáveis por registrar advertências e acompanhar a disciplina dos alunos. | Registrar advertências de forma rápida e acompanhar o status delas. |
+| **Coordenação**                   | Setor que valida advertências e controla o fluxo disciplinar.                 | Validar, rejeitar ou encaminhar advertências ao setor pedagógico.   |
+| **Direção**                       | Responsável pela homologação das advertências e decisões finais.              | Homologar advertências, gerar relatórios e administrar o sistema.   |
+| **Setor Pedagógico (ETEP)**       | Realiza acompanhamento pedagógico de alunos reincidentes.                     | Registrar intervenções, observações e reuniões pedagógicas.         |
+| **Pais e Responsáveis**           | Devem ser informados rapidamente sobre ocorrências disciplinares.             | Receber notificações e acompanhar o histórico disciplinar do aluno. |
+| **Alunos**                        | Registrados no sistema e afetados pelas advertências.                         | Visualizar suas advertências e histórico disciplinar.               |
+| **Time de Desenvolvimento / APS** | Responsáveis pelo desenvolvimento do sistema.                                 | Criar, documentar e manter o sistema, garantindo suas funções.      |
+
 ## 3.2 Resumo dos Usuarios
-| Nome   | Descrição                                   |
-|--------|---------------------------------------------|
-| Alunos | Ter acesso às INFRAÇÕES DISCIPLINARES.     |
+| Usuário                 | Descrição / Acesso                                                                                                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Professor**           | Pode registrar e editar advertências antes da validação; anexar evidências; consultar histórico por aluno ou turma. |
+| **Coordenação**         | Valida, rejeita ou encaminha advertências; gera relatórios; solicita reuniões com responsáveis.                     |
+| **Direção**             | Homologa advertências; gerencia usuários e categorias; acessa relatórios completos.                                 |
+| **Pais e Responsáveis** | Recebem notificações automáticas e podem consultar o histórico disciplinar do aluno.                                |
+| **Alunos**              | Podem visualizar suas próprias advertências e intervenções pedagógicas.                                             |
+
 
 
 # 4. Visão Geral do Produto
@@ -52,33 +64,139 @@ O produto será um sistema digital integrado ao fluxo escolar, permitindo que pr
 - Redução de papelada e burocracia.
 - Acesso controlado para cada nível (professor, coordenação, direção).
 # 5. Recursos do Produto(Funcionalidades)
-Registro de advertências
-- Professores podem registrar advertencias diretamente pelo sistema
-
-Fluxo automatizado
-- Advertências são enviadas automaticamente a coordenação e direção para validação.
-
-Notificações aos pais
-- Envio de sms, e-mail ou notificação via aplicativo(whatswapp ou outro) para os responsaveis
-
-Histórico disciplinar
-- ficha do aluno com todas as advertências registradas, organizadas por data e tipo.
-
-Painel de acompanhamento
-- Coordenação e direção podem visualizar o andamento das advertências.
-
-Relatorios
-- Geração de relatorios mensais ou por turma.
-
-Controle de permissões
-- Cada usuario acessa apenas suas funções (professor, coordenação, direção, pais).
+- Registrar advertências rapidamente.
+-	Encaminhar automaticamente para coordenação/direção.
+-	Enviar notificações automáticas aos pais.
+-	Manter histórico disciplinar por aluno.
+-	Permitir consulta por data, tipo e usuário.
+-	Gerar relatórios mensais e por turma.
+-	Controlar permissões de acesso.
 
 # 6. Casos de Uso
+– Registrar Advertência
 
+– Validar Advertência
+
+– Homologar Advertência
+
+– Notificar Responsáveis
+
+– Consultar Histórico
+
+ – Gerar Relatórios
 ## 6.1 Diagrama de Casos de Uso
 
-## 6.2 Fluxo de Casos de Usos
 
+## 6.2 Fluxo de Casos de Usos
+- Registrar Advertência
+
+Ator Principal: Professor
+Objetivo: Registrar uma advertência de forma rápida.
+
+Fluxo Principal (Sucesso)
+
+O professor acessa o sistema.
+
+Seleciona a opção “Registrar Advertência”.
+
+Escolhe o aluno.
+
+Informa o tipo da advertência.
+
+Descreve o ocorrido.
+
+(Opcional) Anexa evidências.
+
+Envia para validação da coordenação.
+
+O sistema confirma o envio.
+
+- Validar Advertência
+
+Ator Principal: Coordenação
+Objetivo: Conferir e validar registros feitos pelos professores.
+
+Fluxo Principal
+
+A coordenação acessa advertências pendentes.
+
+Seleciona uma advertência.
+
+Analisa as informações.
+
+Clica em “Validar”.
+
+Sistema atualiza o status para “Validada”.
+
+- Homologar Advertência
+
+Ator Principal: Direção
+Objetivo: Tornar oficial uma advertência validada.
+
+Fluxo Principal
+
+Direção visualiza advertências validadas.
+
+Seleciona uma advertência.
+
+Analisa a descrição e histórico do aluno.
+
+Clica em “Homologar”
+
+- Notificar Responsáveis
+
+Ator Principal: Sistema
+Objetivo: Comunicar pais e responsáveis automaticamente.
+
+Fluxo Principal
+
+Quando uma advertência é homologada, o sistema identifica o responsável do aluno.
+
+Sistema gera mensagem automática (WhatsApp, SMS ou e-mail).
+
+Envia a notificação ao responsável.
+
+Sistema registra que a notificação foi enviada.
+
+Sistema registra a homologação e armazena no histórico final.
+- Consultar Histórico
+
+Atores: Professor, Coordenação, Direção, Pais, Aluno
+Objetivo: Ver advertências passadas.
+
+Fluxo Principal
+
+Usuário acessa “Histórico”.
+
+Pesquisa por aluno, turma ou data.
+
+Sistema exibe:
+
+tipo
+
+data
+
+descrição
+
+status (validada, homologada, rejeitada)
+
+Usuário analisa os registros
+- Gerar Relatórios
+
+Atores: Coordenação e Direção
+Objetivo: Emitir relatórios para gestão disciplinar
+
+Fluxo Principal
+
+Usuário acessa Relatórios
+
+Seleciona filtros (turma, período, tipo).
+
+Sistema processa os dados.
+
+Exibe relatório na tela.
+
+(Opcional) Usuário exporta como PDf.
 # 7. Restrições
 ## 7.1 Restrições de Design
 - Interface deve ser simples e fácil para uso rápido em sala de aula.
