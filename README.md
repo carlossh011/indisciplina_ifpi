@@ -67,13 +67,15 @@ O produto será um sistema digital integrado ao fluxo escolar, permitindo que pr
 - Redução de papelada e burocracia.
 - Acesso controlado para cada nível (professor, coordenação, direção).
 # 5. Recursos do Produto(Funcionalidades)
-- Registrar advertências rapidamente.
--	Encaminhar automaticamente para coordenação/direção.
--	Enviar notificações automáticas aos pais.
--	Manter histórico disciplinar por aluno.
--	Permitir consulta por data, tipo e usuário.
--	Gerar relatórios mensais e por turma.
--	Controlar permissões de acesso.
+| Recurso | Descrição |
+|--------|-----------|
+| Registrar advertências | Permite registrar advertências rapidamente. |
+| Encaminhamento automático | Envia automaticamente cada advertência para coordenação/direção. |
+| Notificações aos responsáveis | Envia alertas automáticos aos pais/responsáveis. |
+| Histórico disciplinar | Mantém o histórico de advertências por aluno. |
+| Consulta filtrada | Permite consultar por data, tipo, aluno, turma e usuário. |
+| Relatórios | Gera relatórios mensais, por turma ou por tipo de ocorrência. |
+| Controle de permissões | Controla o acesso conforme o nível do usuário. |
 
 # 6. Casos de Uso
 – Registrar Advertência
